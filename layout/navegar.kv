@@ -1,0 +1,129 @@
+#:kivy 1.0.0
+
+<Navegar@MDScreen>:
+    name: "navegar"
+    
+    MDBoxLayout:
+        orientation: "vertical"
+        padding: dp(24)
+        spacing: dp(24)
+
+
+        MDBoxLayout:
+            adaptive_height: True
+
+            Image:
+                source: 'res/branding/logo.png'
+                size_hint_y: None
+                height: dp(48)
+                
+            MDIconButton:
+                icon: 'account-outline'
+                on_press: app.acao_entrar()
+
+        MDScrollView:
+            GridLayout:
+                cols: 1
+                size_hint_y: None
+                row_default_height: dp(250)
+                height: self.minimum_height
+                spacing: dp(8)
+
+                MDCard:
+                    style: "outlined"
+                    line_color: (0.2, 0.2, 0.2, 0.8)
+                    md_bg_color: "#f8f5f4"
+                    padding: dp(12)
+
+                    MDBoxLayout:
+                        orientation: "vertical"
+
+                        MDBoxLayout:
+                            FitImage:
+                                source: "res/banner.png"
+                                radius: [3,]
+                            
+                        MDBoxLayout:
+                            orientation: "vertical"
+                            padding: dp(4)
+                            spacing: dp(4)
+
+                            MDLabel:
+                                halign: "center"
+                                text: "Lar São Domingos"
+                            
+                            MDProgressBar:
+                                value: 50
+
+
+                            MDLabel:
+                                text: "Telefone: (82) 2121-1300"
+                            
+                            MDLabel:
+                                text: "O Lar São Domingos é uma sociedade sem fins lucrativos."
+                
+
+                MDCard:
+                    style: "outlined"
+                    line_color: (0.2, 0.2, 0.2, 0.8)
+                    md_bg_color: "#f8f5f4"
+                    padding: dp(12)
+
+                    MDBoxLayout:
+                        orientation: "vertical"
+
+                        MDBoxLayout:
+                            FitImage:
+                                source: "res/apala_banner.jpg"
+                                radius: [3,]
+                            
+                        MDBoxLayout:
+                            orientation: "vertical"
+                            padding: dp(8)
+                            spacing: dp(4)
+                            
+                            MDLabel:
+                                halign: "center"
+                                text: "Apala (Maceió)"
+                            
+                            MDProgressBar:
+                                value: 50
+
+                            MDLabel:
+                                text: "Telefone: (82) 3241-4451"
+                            
+                            MDLabel:
+                                text: "A APALA é uma instituição sem fins lucrativos."
+
+                
+                MDCard:
+                    style: "outlined"
+                    line_color: (0.2, 0.2, 0.2, 0.8)
+                    md_bg_color: "#f8f5f4"
+                    padding: dp(12)
+
+                    MDBoxLayout:
+                        orientation: "vertical"
+
+                        MDBoxLayout:
+                            FitImage:
+                                source: "res/laca_banner.jpg"
+                                radius: [3,]
+                            
+                        MDBoxLayout:
+                            orientation: "vertical"
+                            padding: dp(8)
+                            spacing: dp(4)
+                            
+                            MDLabel:
+                                halign: "center"
+                                text: "LACA"
+                            
+                            MDProgressBar:
+                                value: 50
+
+                            MDLabel:
+                                text: "Telefone: (82) 3241-4451"
+                            
+                            MDLabel:
+                                text: "LACA - LAR DE AMPARO A CRIANÇA PARA ADOÇÃO."

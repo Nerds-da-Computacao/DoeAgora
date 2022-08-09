@@ -1,0 +1,68 @@
+#:kivy 1.0.0
+
+<Entrar@MDScreen>:
+    name: "entrar"
+    
+    MDBoxLayout:
+        orientation: "vertical"
+        padding: dp(24)
+        spacing: dp(24)
+
+        MDBoxLayout:
+            adaptive_height: True
+
+            Image:
+                source: 'res/branding/logo.png'
+                size_hint_y: None
+                height: dp(48)
+                
+            MDIconButton:
+                icon: 'arrow-u-right-top'
+                on_press: app.acao_navegar()
+
+        MDBoxLayout:
+            adaptive_height: True
+            orientation: "vertical"
+            spacing: dp(8)
+
+            MDTextField:
+                hint_text: "Número de Telefone"
+                mode: "fill"
+            
+            MDTextField:
+                password: True
+                password_mask: "•"
+                hint_text: "Senha"
+                mode: "fill"
+            
+            MDFlatButton:
+                text: "Esqueci minha senha?"
+        
+        MDBoxLayout:
+            orientation: "vertical"
+            spacing: dp(4)
+
+            MDRaisedButton:  
+                pos_hint: {"center_x": 0.5}
+                size_hint_x: 0.75
+
+                md_bg_color: '#5aa02c'
+                text: "Entrar"
+
+                on_press: app.acao_entrar()
+            
+            MDRaisedButton:
+                pos_hint: {"center_x": 0.5}
+                size_hint_x: 0.75
+
+                md_bg_color: '#447821'
+                text: "Cadastrar"
+        
+        MDBoxLayout:
+            MDLabel:
+                font_style: "Caption"
+                halign: "center"
+                theme_text_color: "Custom"
+                text_color: "#cccccc"
+                text: "2022 - Grupo Nerds da Computação"
+        
